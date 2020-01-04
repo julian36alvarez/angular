@@ -1,0 +1,26 @@
+<table datatable class="row-border hover">
+  <thead>
+    <tr>
+      <th scope="col">#id</th>
+      <th scope="col">nombres</th>
+      <th scope="col">apellidos</th>
+      <th scope="col">cedula</th>
+      <th scope="col">correo</th>
+      <th scope="col">telefono</th>
+      <th scope="col">Editar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of clients">
+  
+      <td>{{item.id}}</td>
+      <td>{{item.nombres}}</td>
+      <td>{{item.apellidos}}</td>
+      <td>{{item.cedula}}</td>
+      <td>{{item.correo}}</td>
+      <td>{{item.telefono}}</td>
+      <td><button routerLink ="/form/{{item.id}}" type="button" class="btn btn-secondary">Editar</button></td>
+    </tr>
+   
+  </tbody>
+</table>

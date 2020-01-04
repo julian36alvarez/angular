@@ -1,0 +1,36 @@
+<div class="container">
+  <div *ngIf="errors" class="alert alert-danger"> 
+      <div *ngFor="let item of errors| keyvalue">
+          {{ item.key }} - {{ item.value }}
+        </div>
+</div>
+  <div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Nombres</label>
+      <input [(ngModel)]="client.nombres" type="text" class="form-control" id="nombres" placeholder="Nombres">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Apellidos</label>
+      <input [(ngModel)]="client.apellidos" type="text" class="form-control" id="apellidos" placeholder="Apellidos">
+    </div>
+  </div>
+   <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Cédula</label>
+      <input [(ngModel)]="client.cedula" type="numeric" class="form-control" id="cedula" placeholder="Cédula">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Télefono</label>
+      <input [(ngModel)]="client.telefono" type="numeric" class="form-control" id="telefono" placeholder="Télefono">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Correo</label>
+    <input [(ngModel)]="client.correo" type="text" class="form-control" id="correo" placeholder="Correo">
+  </div>
+
+
+  <button (click)="saveClient()" class="btn btn-primary">Guardar</button>
+</div>
+</div>
